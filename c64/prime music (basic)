@@ -1,0 +1,71 @@
+10 print "modulo calculation"
+20 gosub 1000
+30 gosub 2150
+40 for i = 1 to 100-1
+50 read a
+60 n=a-INT(a/b)*b
+70 if n=0 then gosub 1500
+80 if n=1 then gosub 1600
+90 if n=2 then gosub 1700
+100 if n=3 then gosub 1800
+110 if n=4 then gosub 1900
+120 if n=5 then gosub 2000
+130 if n=6 then gosub 2100
+160 next i
+170 end: rem end the program.
+1000 b=7 :rem some setup stuff
+1010 s=54272: rem set sound chip
+1020 for l=s to s+24:poke l,0:next: rem clear sound chip
+1030 poke s+24,15: rem set volume to max
+1040 poke s+5,20: rem set attack and delay to 1
+1050 poke s+6,50
+1060 poke s+4,33: rem set to voice 1 
+1070 return
+1500 poke s+24,15: rem set volume to max (0)
+1510 poke s,135:pokes+1,33
+1520 for w=1 to 100:next
+1530 poke s+24,0: rem set volume to min
+1540 return
+1600 poke s+24,15: rem set volume to max (1)
+1610 poke s,162:pokes+1,37
+1620 for w=1 to 100:next
+1630 poke s+24,0: rem set volume to min
+1640 return
+1700 poke s+24,15: rem set volume to max (2)
+1710 poke s,62:pokes+1,42
+1720 for w=1 to 100:next
+1730 poke s+24,0: rem set volume to min
+1740 return
+1800 poke s+24,15: rem set volume to max (3)
+1810 poke s,193:pokes+1,44
+1820 for w=1 to 100:next
+1830 poke s+24,0: rem set volume to min
+1840 return
+1900 poke s+24,15: rem set volume to max (4)
+1910 poke s,60:pokes+1,50
+1920 for w=1 to 100:next
+1930 poke s+24,0: rem set volume to min
+1940 return
+2000 poke s+24,15: rem set volume to max (5)
+2010 poke s,99:pokes+1,56
+2020 for w=1 to 100:next
+2030 poke s+24,0: rem set volume to min
+2040 return
+2100 poke s+24,15: rem set volume to max (6)
+2110 poke s,75:pokes+1,63
+2120 for w=1 to 100:next
+2130 poke s+24,0: rem set volume to min
+2140 return
+2150 poke 53280,0
+2155 poke 53281,0
+2158 print "{clear}"
+2160 print "prime numbers mod 7 music"
+2170 print "========================================"
+2180 print "this program does a mod 7 calculation on a prime number and then plays a musical note depending on the remainder."
+2190 print ""
+2200 print "as prime numbers are random and we don't have a way to predict where they will come. so too should this randomness come into play with the progra."
+2205 print ""
+2210 print "made for fun by betaraddish 2020"
+2220 return
+3000 data 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233,
+3010 data 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541
